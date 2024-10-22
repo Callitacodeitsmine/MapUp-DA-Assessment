@@ -123,6 +123,6 @@ def calculate_time_based_toll_rates(df)->pd.DataFrame():
     for index, row in df.iterrows():
 
         for vehicle in ['moto', 'car', 'rv', 'bus', 'truck']:
-            df.at[index, vehicle] *= discount_factors['weekday'][(time(0, 0), time(10, 0))]  # Example factor application
+            df.at[index, vehicle] *= discount_factors['weekday'][(time(0, 0), time(10, 0))]
 
     return df
